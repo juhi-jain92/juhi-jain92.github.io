@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juhi Jain — AI PM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #FAFAF8;
+    --surface: #F3F2EE;
+    --text: #1C1C1A;
+    --muted: #6B6B66;
+    --accent: #1D9E75;
+    --accent-light: #E1F5EE;
+    --border: rgba(28,28,26,0.1);
+    --tag-bg: #EEEDFE;
+    --tag-text: #3C3489;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141412;
+      --surface: #1E1E1B;
+      --text: #F0EFE9;
+      --muted: #9A9A92;
+      --accent: #1D9E75;
+      --accent-light: #04342C;
+      --border: rgba(240,239,233,0.1);
+      --tag-bg: #26215C;
+      --tag-text: #CECBF6;
+    }
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header {
+    padding: 72px 0 56px;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .bio {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .links a {
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--border);
+    padding-bottom: 2px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .section {
+    padding: 56px 0;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+
+  .project {
+    margin-bottom: 48px;
+  }
+
+  .project:last-child {
+    margin-bottom: 0;
+  }
+
+  .project-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+
+  .project-type {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+
+  .project-status {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .project h2 {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--text);
+    line-height: 1.3;
+  }
+
+  .project p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+    max-width: 580px;
+  }
+
+  .tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .project-links a {
+    font-size: 13px;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-bottom: 0.5px solid var(--border);
+    padding-bottom: 2px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .project-links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .divider {
+    width: 32px;
+    height: 0.5px;
+    background: var(--border);
+    margin: 40px 0;
+  }
+
+  .about-section {
+    padding: 56px 0;
+  }
+
+  .about-section .section-label {
+    margin-bottom: 24px;
+  }
+
+  .about-section p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 560px;
+    margin-bottom: 16px;
+  }
+
+  .about-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  footer {
+    padding: 32px 0 48px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <p class="eyebrow">AI Product Manager · Seattle</p>
+    <h1>Juhi Jain —<br><em>AI-native PM.</em><br>I build the tools I wish existed.</h1>
+    <p class="bio">10 years shipping 0-to-1 products end to end. Now building agentic AI systems hands-on and transitioning into AI-first product leadership.</p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/juhi-jain-4024a7104/" target="_blank">LinkedIn ↗</a>
+      <a href="https://github.com/jjay05" target="_blank">GitHub ↗</a>
+      <a href="mailto:juhijaindtu@gmail.com">Email</a>
+    </div>
+  </header>
+
+  <div class="section">
+    <p class="section-label">Projects</p>
+
+    <div class="project">
+      <div class="project-meta">
+        <span class="project-type">Agentic Pipeline</span>
+        <span class="dot"></span>
+        <span class="project-status">Live</span>
+      </div>
+      <h2>Job Hunt OS</h2>
+      <p>A personal agentic job search pipeline that auto-discovers roles across four sources daily, scores them against a structured rubric using Claude, and surfaces the best matches for manual review. Built end-to-end in Python with Google Sheets as the shared ledger between automation and human judgment.</p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Claude API</span>
+        <span class="tag">Agentic workflow</span>
+        <span class="tag">GitHub Actions</span>
+        <span class="tag">Google Sheets API</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/jjay05/job-hunt-os" target="_blank">GitHub ↗</a>
+        <a href="https://github.com/jjay05/job-hunt-os/blob/main/docs/builder-story-final.md" target="_blank">Builder story ↗</a>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="project">
+      <div class="project-meta">
+        <span class="project-type">Consumer App</span>
+        <span class="dot"></span>
+        <span class="project-status">Live</span>
+      </div>
+      <h2>Indian Roots — Bedtime Stories</h2>
+      <p>A mood-based bedtime story app for parents who want a more intentional nighttime ritual. Maps how a child's day went to the right kind of story — Panchatantra, Akbar-Birbal, Ganesh ji, comfort stories, and more. Designed mobile-first because bedtime is not a desktop moment.</p>
+      <div class="tags">
+        <span class="tag">Lovable</span>
+        <span class="tag">Mobile-first</span>
+        <span class="tag">Mood-based UX</span>
+        <span class="tag">Indian storytelling</span>
+      </div>
+      <div class="project-links">
+        <a href="https://indian-roots-stories.lovable.app" target="_blank">Live app ↗</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="about-section">
+    <p class="section-label">Background</p>
+    <p>Most recently Associate Director of Product at LG Ads, owning a $400M programmatic business across supply, demand, identity, and monetization. Before that: a B2C TV OS that reached 100M+ TVs, identity infrastructure built from zero, and four AI systems worth ~$20M.</p>
+    <p>Left in April 2026 to make a deliberate move into AI-first product leadership. I build to learn, and I document everything so the thinking is visible.</p>
+  </div>
+
+  <footer>
+    <p>Seattle, WA · Open to remote · juhijaindtu@gmail.com</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
