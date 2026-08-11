@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juhi Jain — AI Product Manager</title>
+<meta name="description" content="AI-native PM. I build the tools I wish existed. Agentic systems, evals, guardrails, and production AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111318; --panel:#181b22; --line:#262a34;
+  --bright:#f0f2f8; --mist:#c2c8d6; --dim:#8a90a2;
+  --signal:#7aa2f7; --live:#5fbf8a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--mist);font-family:'Inter',sans-serif;font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--signal);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;color:var(--bright);letter-spacing:-.01em}
+.mono{font-family:'JetBrains Mono',monospace}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal)}
+section{padding:72px 0;border-top:1px solid var(--line)}
+/* hero */
+header{padding:96px 0 80px}
+.hero-id{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--dim);margin-bottom:22px}
+h1{font-size:clamp(34px,6vw,52px);line-height:1.12;font-weight:700;margin-bottom:18px}
+h1 em{font-style:normal;color:var(--signal)}
+.hero-sub{font-size:19px;max-width:620px;margin-bottom:30px}
+.links{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:9px 18px;border:1px solid var(--line);border-radius:8px;color:var(--mist);font-size:14.5px;font-weight:500;transition:border-color .15s,color .15s}
+.btn:hover{border-color:var(--signal);color:var(--bright);text-decoration:none}
+.btn.primary{background:var(--signal);border-color:var(--signal);color:#0d0f14}
+.btn.primary:hover{color:#0d0f14;opacity:.92}
+/* journey = git log */
+.log{border-left:1px solid var(--line);margin-top:36px}
+.commit{position:relative;padding:0 0 34px 30px}
+.commit:last-child{padding-bottom:0}
+.commit::before{content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--ink);border:2px solid var(--signal)}
+.commit.next::before{border-color:var(--dim);border-style:dashed}
+.chash{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--dim)}
+.chash b{color:var(--signal);font-weight:500}
+.cmsg{font-family:'Space Grotesk',sans-serif;font-size:18px;color:var(--bright);margin:4px 0 4px}
+.cbody{font-size:15px;color:var(--mist);max-width:640px}
+/* projects */
+h2{font-size:26px;margin:10px 0 8px}
+.sec-intro{max-width:640px;margin-bottom:36px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.card.wide{grid-column:1/-1}
+.tag{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.tag .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.dot.live{background:var(--live)} .dot.prod{background:var(--signal)} .dot.wip{background:#e0b458}
+.card h3{font-size:19px}
+.card p{font-size:15px}
+.stack{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--dim);margin-top:auto;padding-top:8px}
+.card .out{font-size:14px}
+/* capabilities */
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+td{padding:11px 14px 11px 0;border-top:1px solid var(--line);vertical-align:top}
+td:first-child{font-family:'Space Grotesk',sans-serif;color:var(--bright);white-space:nowrap;font-weight:500}
+td:last-child{color:var(--mist)}
+/* background */
+.bg p{max-width:680px;margin-bottom:16px}
+/* footer */
+footer{padding:64px 0 80px;border-top:1px solid var(--line)}
+.foot-line{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--dim);margin-top:26px}
+@media(max-width:680px){.grid{grid-template-columns:1fr}section{padding:56px 0}}
+@media(prefers-reduced-motion:no-preference){
+  .card{transition:transform .18s ease,border-color .18s ease}
+  .card:hover{transform:translateY(-2px);border-color:var(--signal)}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow" style="margin-bottom:20px">AI Product Manager &middot; Seattle</div>
+  <h1>AI-native PM.<br><em>I build the tools I wish existed.</em></h1>
+  <p class="hero-sub">I build agentic AI systems hands-on and own AI quality strategy for a production voice-AI product. Behind it: ten years shipping 0-to-1 products across programmatic advertising and CTV.</p>
+  <div class="links">
+    <a class="btn primary" href="https://calendly.com/juhijaindtu/30min">Book a call</a>
+    <a class="btn" href="https://www.linkedin.com/in/juhi-jain-4024a7104/">LinkedIn</a>
+    <a class="btn" href="https://github.com/juhi-jain92">GitHub</a>
+    <a class="btn" href="mailto:juhijaindtu@gmail.com">Email</a>
+  </div>
+</header>
+
+<section id="journey">
+  <div class="eyebrow">git log --oneline</div>
+  <h2>From first app to production AI, without stopping</h2>
+  <p class="sec-intro">In June 2026 I shipped my first app. Then I kept committing. Every project below taught the next one.</p>
+  <div class="log">
+    <div class="commit">
+      <div class="chash"><b>init</b> · Jun 2026</div>
+      <div class="cmsg">Indian Roots — first shipped app</div>
+      <div class="cbody">A mood-based bedtime story app for parents, built and launched on Lovable. Proof that I could take an idea to a live product alone. <a href="https://indian-roots-stories.lovable.app">Live app ↗</a></div>
+    </div>
+    <div class="commit">
+      <div class="chash"><b>feat</b> · Jul 2026</div>
+      <div class="cmsg">Job Hunt OS — my first agentic pipeline</div>
+      <div class="cbody">Graduated from no-code to Python, the Claude API, and GitHub Actions: an agent that discovers, scores, and ranks 2,000+ roles daily with me as the review gate.</div>
+    </div>
+    <div class="commit">
+      <div class="chash"><b>role</b> · Jul 2026</div>
+      <div class="cmsg">Vectorial AI — AI Product Manager</div>
+      <div class="cbody">From building for myself to owning AI quality strategy for a production voice-AI interviewer that runs live research conversations with real participants.</div>
+    </div>
+    <div class="commit">
+      <div class="chash"><b>feat</b> · Aug 2026</div>
+      <div class="cmsg">ThinkOS — an agent with a rulebook</div>
+      <div class="cbody">A personal AI thinking system where the agent organizes and I approve. Every failure became a rule; safety is structural, not behavioral.</div>
+    </div>
+    <div class="commit">
+      <div class="chash"><b>ship</b> · Aug 2026</div>
+      <div class="cmsg">ContractIQ — full-stack AI app in production</div>
+      <div class="cbody">Built in Mahesh Yadav's Applied AI Product Engineering cohort: launched on Vercel, Supabase, and Netlify, then re-hosted on Azure AI.</div>
+    </div>
+    <div class="commit next">
+      <div class="chash"><b>next</b></div>
+      <div class="cmsg">ThinkOS coach phase · interview-prep agent</div>
+      <div class="cbody">Goal-aware testing against business cases, gap detection, and a living map of what I know. The rails are already laid.</div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="eyebrow">Projects</div>
+  <h2>What I've built</h2>
+  <div class="grid">
+    <div class="card wide">
+      <div class="tag"><span class="dot prod"></span>Production · Day job</div>
+      <h3>Voice-AI interviewer quality — Vectorial AI</h3>
+      <p>I own the quality bar for an AI interviewer conducting live qualitative research: the MVP and V2 roadmap, North Star and success metrics, competitive benchmarks, and the evaluation architecture — golden datasets, LLM-as-judge calibrated against human review, and a guardrails taxonomy for live conversation (hallucination, jailbreaks, PII, fraud, mid-call recovery). Drove the deterministic-vs-agentic architecture calls that keep quality high while cutting per-turn cost, at roughly $1 per AI interview vs $4-5 human-moderated.</p>
+      <div class="stack">Evals · LLM-as-judge · Guardrails · Voice AI · Deterministic orchestration</div>
+    </div>
+    <div class="card">
+      <div class="tag"><span class="dot live"></span>Live · Agentic pipeline</div>
+      <h3>Job Hunt OS</h3>
+      <p>An agentic job-search pipeline: auto-discovers roles across sources daily, scores them against a structured rubric using Claude, and surfaces the best matches for my review. Model routing benchmarked across quality, latency, and cost.</p>
+      <div class="stack">Python · Claude API · GitHub Actions · Sheets API</div>
+      <p class="out"><a href="https://github.com/juhi-jain92/job-hunt-os">GitHub ↗</a> · <a href="https://github.com/juhi-jain92/job-hunt-os/blob/main/docs/builder-story-final.md">Builder story ↗</a></p>
+    </div>
+    <div class="card">
+      <div class="tag"><span class="dot live"></span>Live · Knowledge agent</div>
+      <h3>ThinkOS</h3>
+      <p>A rulebook-governed agent that turns scattered notes into one connected knowledge graph. Propose-never-modify: the agent stages, I review every diff. Originals preserved verbatim; full backlog ingested for under $2.</p>
+      <div class="stack">Claude Code · Markdown · Git · Obsidian</div>
+      <p class="out"><a href="https://github.com/juhi-jain92/think-OS">GitHub ↗</a></p>
+    </div>
+    <div class="card">
+      <div class="tag"><span class="dot prod"></span>Shipped · Cohort build</div>
+      <h3>ContractIQ</h3>
+      <p>A full-stack AI app taken to production twice: first on Vercel, Supabase, and Netlify, then re-hosted on Azure AI. Built end to end in the Applied AI Product Engineering cohort.</p>
+      <div class="stack">Vercel · Supabase · Netlify · Azure AI</div>
+      <p class="out"><a href="https://contractiq-legal.netlify.app/">Live app ↗</a></p>
+    </div>
+    <div class="card">
+      <div class="tag"><span class="dot live"></span>Live · Consumer app</div>
+      <h3>Indian Roots — Bedtime Stories</h3>
+      <p>A mood-based bedtime story app mapping a child's day to the right story: Panchatantra, Akbar-Birbal, comfort stories. Mobile-first, because bedtime is not a desktop moment.</p>
+      <div class="stack">Lovable · Mobile-first UX</div>
+      <p class="out"><a href="https://indian-roots-stories.lovable.app">Live app ↗</a></p>
+    </div>
+    <div class="card wide">
+      <div class="tag"><span class="dot wip"></span>Built · Shipping soon</div>
+      <h3>Reusable AI capabilities — Claude skills &amp; plugins</h3>
+      <p>Beyond apps: packaged, reusable capabilities including a PRD evaluator skill, a PRD writing skill, a personal job-strategy skill, and an SDLC orchestrator that chains eleven gated build stages. The bet: durable AI leverage comes from skills and rulebooks, not one-off chats.</p>
+      <div class="stack">Claude skills · Plugins · Spec-driven development</div>
+    </div>
+  </div>
+</section>
+
+<section id="capabilities">
+  <div class="eyebrow">Capability map</div>
+  <h2>Where each muscle was built</h2>
+  <table>
+    <tr><td>Agentic orchestration</td><td>ThinkOS · Job Hunt OS</td></tr>
+    <tr><td>Evals &amp; guardrails</td><td>Vectorial AI · LG creative-approval workflow</td></tr>
+    <tr><td>Human-in-the-loop design</td><td>Job Hunt OS · LG approval gates · Vectorial</td></tr>
+    <tr><td>AI workflow &amp; product design</td><td>ContractIQ · PRD skills · LG AI transformation</td></tr>
+    <tr><td>Build-vs-buy &amp; architecture judgment</td><td>Deterministic-vs-agentic calls across Vectorial &amp; personal builds</td></tr>
+    <tr><td>Tooling &amp; foundations</td><td>Python · Git · APIs · Azure · Claude Code, across the cohort and every build</td></tr>
+    <tr><td>Domain depth</td><td>10 years programmatic, CTV &amp; identity at LG Ads and Alphonso</td></tr>
+  </table>
+</section>
+
+<section id="background" class="bg">
+  <div class="eyebrow">Background</div>
+  <h2>The decade before the pivot was the training</h2>
+  <p>Most recently Associate Director of Product at LG Ad Solutions, owning a $400M programmatic business across supply, demand, identity, and monetization. I drove the org's AI-first transformation: three AI workflows shipped into live operations with evals, guardrails, and human review, delivering $2M in annualized impact with $10M+ projected.</p>
+  <p>Before that: River OS, a B2C smart TV OS whose voice tech LG integrated across 100M+ TVs; identity infrastructure built from zero to 60% CTV coverage; and an early career at EXL building 50+ predictive models by hand, where the AI foundation started.</p>
+  <p>I left LG in April 2026 to go all in on applied AI. I build to learn, and I document everything so the thinking is visible.</p>
+</section>
+
+<footer>
+  <div class="foot-line">Building in applied and agentic AI &middot; Seattle, WA &middot; open to remote &middot; <a href="mailto:juhijaindtu@gmail.com">juhijaindtu@gmail.com</a> &middot; last commit: Aug 2026</div>
+</footer>
+
+</div>
+</body>
+</html>
